@@ -1,0 +1,6 @@
+/* App.css — Styles for App.jsx layout */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
