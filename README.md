@@ -1,2 +1,2 @@
 # API Exploration
-Simple dashboard to interact with different APIs
+Simple web app to interact with different APIs
