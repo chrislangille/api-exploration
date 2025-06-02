@@ -1,0 +1,102 @@
+/* Layout.css*/
+.header {
+    position: relative; /* Needed for nav absolute positioning */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid #2c2c2c;
+    z-index: 10; /* Ensure it's on top */
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+
+  .logo-link{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #90caf9;
+    letter-spacing: 0.5px;
+  }
+
+  .logo-link:link,
+  .logo-link:visited,
+  .logo-link:hover,
+  .logo-link:active {
+    text-decoration: none;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #2c2c2c;
+    color: #81d4fa;
+  }
+  
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Existing styles stay unchanged until this point... */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+/* Responsive nav dropdown fix */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 100%; /* Pushes it below the header */
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    z-index: 999; /* Higher than header contents */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav.nav-open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  button:hover {
+    background-color: #5a81a1;
+  }
+}

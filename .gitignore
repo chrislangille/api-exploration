@@ -25,4 +25,3 @@ dist-ssr
 
 # Protected information
 .env
- const weather_api = import.meta.env.VITE_WEATHER_API_KEY;

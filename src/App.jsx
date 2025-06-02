@@ -1,14 +1,22 @@
-import Header from "./components/Header";
-import Weather from "./components/Weather";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout.jsx";
+import Home from "./pages/Home.jsx";
+import NoPage from "./pages/NoPage.jsx";
+import WeatherPage from "./pages/WeatherPage.jsx";
+import ExploreAPIs from "./pages/ExploreAPIs.jsx";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <Header />
-      <Weather />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="weather" element={<WeatherPage />} />
+          <Route path="explore-apis" element={<ExploreAPIs />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
