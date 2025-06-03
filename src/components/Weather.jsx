@@ -7,6 +7,7 @@ const Weather = () => {
 
   // Calling the API
   const weather_api = import.meta.env.VITE_WEATHER_API_KEY;
+
   const fetchData = async () => {
     await fetch(`http://api.weatherapi.com/v1/current.json?key=${weather_api}&q=${city}&aqi=no`)
       .then((response) => response.json())
@@ -14,6 +15,7 @@ const Weather = () => {
       .catch((error) => console.error(error));
   };
 
+  // Initial load
   useEffect(() => {
     fetchData();
   }, []);

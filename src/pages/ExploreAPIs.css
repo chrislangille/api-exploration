@@ -39,6 +39,7 @@
   
   .api-choice {
     background-color: #3a3a3a;
+    border-radius: 5px;
   }
 
   .api-choice:hover {

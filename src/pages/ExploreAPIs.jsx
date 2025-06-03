@@ -11,6 +11,11 @@ function APIList() {
             Weather API
           </Link>
         </li>
+        <li className="api-choice">
+          <Link to="/breaking-bad-quotes" className="api-link">
+            Breaking Bad Quotes
+          </Link>
+        </li>
       </ul>
     </div>
   );
